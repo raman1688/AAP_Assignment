@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AAPassignment/static/css/main.03703fa4.chunk.css",
+    "main.js": "/AAPassignment/static/js/main.e712ca82.chunk.js",
+    "main.js.map": "/AAPassignment/static/js/main.e712ca82.chunk.js.map",
+    "runtime~main.js": "/AAPassignment/static/js/runtime~main.a884dcb9.js",
+    "runtime~main.js.map": "/AAPassignment/static/js/runtime~main.a884dcb9.js.map",
+    "static/js/2.c3bce265.chunk.js": "/AAPassignment/static/js/2.c3bce265.chunk.js",
+    "static/js/2.c3bce265.chunk.js.map": "/AAPassignment/static/js/2.c3bce265.chunk.js.map",
+    "index.html": "/AAPassignment/index.html",
+    "precache-manifest.6943f53003ac7665252d201909fb46e5.js": "/AAPassignment/precache-manifest.6943f53003ac7665252d201909fb46e5.js",
+    "service-worker.js": "/AAPassignment/service-worker.js",
+    "static/css/main.03703fa4.chunk.css.map": "/AAPassignment/static/css/main.03703fa4.chunk.css.map"
+  }
+}
