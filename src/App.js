@@ -27,7 +27,7 @@ class App extends Component {
   
   filters = {};
 
-  componentWillMount() {
+  componentDidMount() {
     window.AddCampaigns = (id, name, startDate, endDate, Budget, userId) => {
       if(moment(startDate).isAfter(moment(endDate))) {
         this.props.addCampaignError();
@@ -44,9 +44,6 @@ class App extends Component {
       }
       
     };
-  }
-
-  componentDidMount() {
     const { fetchUsersStartAsync } = this.props;
     fetchUsersStartAsync();
   }
@@ -74,9 +71,7 @@ class App extends Component {
   };
 
   render() {
-    console.log('app.js props: ', this.props);
     const { campaigns, users } = this.props; 
-    
     
     const { startDate, endDate } = this.state.dateInput;
     const { endDateValid, startDateValid } = this.state;

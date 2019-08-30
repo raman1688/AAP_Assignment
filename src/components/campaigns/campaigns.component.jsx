@@ -21,22 +21,26 @@ const Campaigns = ({campaigns, userMap}) => {
             </div>
 
             {campaigns.map((campaign)=>(
-                <div key={campaign.id} className="table-row">
-                    <div className="wrapper">
-                        <div className="table-col">{campaign.name}</div>
-                        <div className="table-col">{userMap[campaign.userId]? userMap[campaign.userId]: 'Unknown user' }</div>
-                        <div className="table-col">{campaign.startDate}</div>
-                        <div className="table-col">{campaign.endDate}</div>
-                        <div className="table-col">
-                            { moment(new Date()).isBetween(campaign.startDate, campaign.endDate) ?
-                                <span className="active">Active</span>
-                                :
-                                <span className="inactive">InActive</span>
-                            }
-                        </div>
-                        <div className="table-col">{currencyFormatter(campaign.Budget)}</div>
-                    </div>              
-                </div>
+                
+                    moment(campaign.startDate).isBefore(moment(campaign.endDate)) &&
+                    <div key={campaign.id} className="table-row">
+                        <div className="wrapper">
+                            <div className="table-col">{campaign.name}</div>
+                            <div className="table-col">{userMap[campaign.userId]? userMap[campaign.userId]: 'Unknown user' }</div>
+                            <div className="table-col">{campaign.startDate}</div>
+                            <div className="table-col">{campaign.endDate}</div>
+                            <div className="table-col">
+                                { moment(new Date()).isBetween(campaign.startDate, campaign.endDate) ?
+                                    <span className="active">Active</span>
+                                    :
+                                    <span className="inactive">InActive</span>
+                                }
+                            </div>
+                            <div className="table-col">{currencyFormatter(campaign.Budget)}</div>
+                        </div>              
+                    </div>
+                
+                
             ))}
             
         </div>

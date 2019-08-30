@@ -3,7 +3,6 @@ import moment from 'moment';
 export const filterCampaign = (filters, campaigns) => {
     let filteredResults = campaigns;
     Object.keys(filters).forEach(function(key) {
-        console.log(key, filters[key]);
         if(key === 'searchText') {
             filteredResults = filteredResults.filter(campaign => 
                 campaign.name.toLowerCase().includes(filters[key].toLowerCase()) 
@@ -31,5 +30,6 @@ export const filterCampaign = (filters, campaigns) => {
 } 
 
 export const addCampaign = (campaign, campaigns) => {
+
     return [...campaigns, campaign];
 }
